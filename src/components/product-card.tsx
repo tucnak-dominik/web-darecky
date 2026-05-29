@@ -27,7 +27,14 @@ export function ProductCard({ product, onOpen }: Props) {
         claimed ? 'opacity-60' : '',
       ].join(' ')}
     >
-      <div className="absolute top-2 left-2 z-10 px-2 py-0.5 rounded-full text-xs bg-background/80 backdrop-blur-sm border border-border/40">
+      <div
+        className={`absolute top-2 left-2 z-10 px-2 py-0.5 rounded-full text-xs backdrop-blur-sm border ${cat.accentClass}`}
+        style={{
+          backgroundColor: 'hsl(var(--cat) / 0.15)',
+          borderColor: 'hsl(var(--cat) / 0.4)',
+          color: 'hsl(var(--cat))',
+        }}
+      >
         {cat.emoji} {cat.label}
       </div>
       {claimed && (

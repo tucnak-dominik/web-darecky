@@ -14,6 +14,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  .accent-mint     { --cat: 160 60% 45%; }
+  .accent-coral    { --cat:  15 85% 60%; }
+  .accent-lavender { --cat: 265 50% 65%; }
+  .accent-gold     { --cat:  45 90% 55%; }
 }
 
 @theme inline {
