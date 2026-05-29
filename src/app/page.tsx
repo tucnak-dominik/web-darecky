@@ -1,6 +1,7 @@
 import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Hero } from '@/components/hero';
+import { ProductGrid } from '@/components/product-grid';
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <Header />
       <main className="min-h-dvh">
         <Hero />
-        {/* product grid follows in next phase */}
+        <ProductGrid />
       </main>
       <Footer />
     </>
