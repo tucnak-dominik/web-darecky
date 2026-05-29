@@ -26,7 +26,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="font-sans bg-background text-foreground">
-        <Providers>{children}</Providers>
+        <Providers serverMode={mode}>{children}</Providers>
       </body>
     </html>
   );
