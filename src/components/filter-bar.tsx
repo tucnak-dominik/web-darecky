@@ -38,10 +38,14 @@ export function FilterBar({
           </PillButton>
         ))}
       </div>
-      <label className="inline-flex items-center gap-2 text-sm cursor-pointer">
-        <Switch checked={hideClaimed} onCheckedChange={onHideClaimedChange} />
+      <div className="inline-flex items-center gap-2 text-sm">
+        <Switch
+          checked={hideClaimed}
+          onCheckedChange={onHideClaimedChange}
+          aria-label="Skrýt zamluvené"
+        />
         <span>Skrýt zamluvené</span>
-      </label>
+      </div>
     </div>
   );
 }
