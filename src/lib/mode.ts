@@ -16,7 +16,11 @@ function toPragueDate(date: Date): { y: number; m: number; d: number } {
   const parts = Object.fromEntries(
     fmt.formatToParts(date).map((p) => [p.type, p.value]),
   );
-  return { y: Number(parts.year), m: Number(parts.month), d: Number(parts.day) };
+  return {
+    y: Number(parts.year),
+    m: Number(parts.month),
+    d: Number(parts.day),
+  };
 }
 
 const dayOfYear = (m: number, d: number) => m * 31 + d;
