@@ -1,7 +1,6 @@
 'use client';
 
 import { ChevronDown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,17 +21,15 @@ export function ModeSwitcher() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="gap-1 text-xs">
-          {label} <ChevronDown className="size-3" />
-        </Button>
+      <DropdownMenuTrigger className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-xs hover:bg-muted focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring">
+        {label} <ChevronDown className="size-3" />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem onSelect={() => setOverride(null)}>
+        <DropdownMenuItem onClick={() => setOverride(null)}>
           Auto (dle data)
         </DropdownMenuItem>
         {ORDER.map((m) => (
-          <DropdownMenuItem key={m} onSelect={() => setOverride(m)}>
+          <DropdownMenuItem key={m} onClick={() => setOverride(m)}>
             {modeConfig[m].emoji} {modeConfig[m].label}
           </DropdownMenuItem>
         ))}
