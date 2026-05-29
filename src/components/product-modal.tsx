@@ -31,7 +31,16 @@ export function ProductModal({ product, onClose }: Props) {
         if (!o) onClose();
       }}
     >
-      <DialogContent className="!max-w-2xl !p-0 overflow-hidden gap-0">
+      <DialogContent
+        className="
+          p-0 overflow-hidden gap-0
+          sm:!max-w-2xl sm:rounded-xl
+          max-sm:!left-0 max-sm:!right-0 max-sm:!top-auto max-sm:!bottom-0
+          max-sm:!translate-x-0 max-sm:!translate-y-0
+          max-sm:!w-full max-sm:!max-w-none
+          max-sm:!rounded-t-2xl max-sm:!rounded-b-none
+        "
+      >
         {product && (
           <>
             <div className="relative aspect-[4/3] w-full bg-muted">
