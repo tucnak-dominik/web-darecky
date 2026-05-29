@@ -1,5 +1,6 @@
 'use client';
 
+import confetti from 'canvas-confetti';
 import { useState } from 'react';
 import {
   AlertDialog,
@@ -33,6 +34,12 @@ export function ClaimButton({ productId, className }: Props) {
         onClick={(e) => {
           e.stopPropagation();
           claim(productId);
+          confetti({
+            particleCount: 60,
+            spread: 70,
+            origin: { y: 0.7 },
+            disableForReducedMotion: true,
+          });
         }}
       >
         ☐ Zamluvit pro Dominika
