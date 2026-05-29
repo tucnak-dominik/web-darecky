@@ -2,6 +2,7 @@
 
 import { ThemeProvider } from 'next-themes';
 import type { ReactNode } from 'react';
+import { ClaimsProvider } from '@/components/claims-provider';
 import { ModeProvider } from '@/components/mode-provider';
 import type { Mode } from '@/lib/mode';
 
@@ -19,7 +20,9 @@ export function Providers({
       enableSystem
       disableTransitionOnChange
     >
-      <ModeProvider serverMode={serverMode}>{children}</ModeProvider>
+      <ModeProvider serverMode={serverMode}>
+        <ClaimsProvider>{children}</ClaimsProvider>
+      </ModeProvider>
     </ThemeProvider>
   );
 }

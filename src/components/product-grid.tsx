@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react';
 import { products as allProducts } from '@/data/products';
 import type { PriceCategory, Product } from '@/types/product';
+import { useClaimsContext } from './claims-provider';
 import { FilterBar } from './filter-bar';
 import { ProductCard } from './product-card';
 import { ProductModal } from './product-modal';
@@ -13,6 +14,7 @@ export function ProductGrid() {
   );
   const [hideClaimed, setHideClaimed] = useState(false);
   const [openProduct, setOpenProduct] = useState<Product | null>(null);
+  const { claims } = useClaimsContext();
 
   const sorted = useMemo(
     () =>
@@ -24,10 +26,13 @@ export function ProductGrid() {
 
   const filtered = useMemo(
     () =>
-      sorted.filter(
-        (p) => activeCategory === 'all' || p.category === activeCategory,
-      ),
-    [sorted, activeCategory],
+      sorted.filter((p) => {
+        if (activeCategory !== 'all' && p.category !== activeCategory)
+          return false;
+        if (hideClaimed && claims[p.id]) return false;
+        return true;
+      }),
+    [sorted, activeCategory, hideClaimed, claims],
   );
 
   return (

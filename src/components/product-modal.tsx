@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/dialog';
 import { categories } from '@/lib/categories';
 import type { Product } from '@/types/product';
+import { ClaimButton } from './claim-button';
 
 type Props = {
   product: Product | null;
@@ -59,7 +60,8 @@ export function ProductModal({ product, onClose }: Props) {
               <p className="text-sm leading-relaxed whitespace-pre-line">
                 {product.description}
               </p>
-              <div className="flex gap-2 justify-end pt-2">
+              <div className="flex flex-wrap gap-2 justify-end pt-2">
+                <ClaimButton productId={product.id} />
                 <Button variant="ghost" onClick={onClose}>
                   Zavřít
                 </Button>
