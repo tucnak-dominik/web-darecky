@@ -1,8 +1,31 @@
 import type { NextConfig } from 'next';
 
+const securityHeaders = [
+  {
+    key: 'Content-Security-Policy',
+    value: [
+      "default-src 'self'",
+      "img-src 'self' data: https:",
+      "style-src 'self' 'unsafe-inline'",
+      "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
+      "font-src 'self' data:",
+      "connect-src 'self' https://*.upstash.io",
+      "frame-ancestors 'none'",
+    ].join('; '),
+  },
+  { key: 'X-Frame-Options', value: 'DENY' },
+  { key: 'X-Content-Type-Options', value: 'nosniff' },
+  { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+  {
+    key: 'Permissions-Policy',
+    value: 'camera=(), microphone=(), geolocation=()',
+  },
+];
+
 const nextConfig: NextConfig = {
-  images: {
-    remotePatterns: [],
+  images: { remotePatterns: [] },
+  async headers() {
+    return [{ source: '/:path*', headers: securityHeaders }];
   },
 };
 

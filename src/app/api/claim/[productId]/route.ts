@@ -1,6 +1,8 @@
+import { checkBotId } from 'botid/server';
 import { NextResponse } from 'next/server';
 import { products } from '@/data/products';
 import { claimProduct, isClaimed, unclaimProduct } from '@/lib/claims-server';
+import { claimWriteLimiter, getClientIp } from '@/lib/ratelimit';
 
 const validIds = new Set(products.map((p) => p.id));
 
@@ -11,10 +13,35 @@ function validate(id: string) {
   return null;
 }
 
+async function gate(req: Request) {
+  const bot = await checkBotId();
+  if (bot.isBot) {
+    return NextResponse.json({ error: 'forbidden' }, { status: 403 });
+  }
+
+  const ip = getClientIp(req);
+  const { success, reset } = await claimWriteLimiter.limit(ip);
+  if (!success) {
+    return NextResponse.json(
+      { error: 'Moc rychlé! Zkus to znovu za chvilku.' },
+      {
+        status: 429,
+        headers: {
+          'Retry-After': String(Math.ceil((reset - Date.now()) / 1000)),
+        },
+      },
+    );
+  }
+  return null;
+}
+
 export async function POST(
-  _req: Request,
+  req: Request,
   ctx: { params: Promise<{ productId: string }> },
 ) {
+  const blocked = await gate(req);
+  if (blocked) return blocked;
+
   const { productId } = await ctx.params;
   const invalid = validate(productId);
   if (invalid) return invalid;
@@ -27,9 +54,12 @@ export async function POST(
 }
 
 export async function DELETE(
-  _req: Request,
+  req: Request,
   ctx: { params: Promise<{ productId: string }> },
 ) {
+  const blocked = await gate(req);
+  if (blocked) return blocked;
+
   const { productId } = await ctx.params;
   const invalid = validate(productId);
   if (invalid) return invalid;
