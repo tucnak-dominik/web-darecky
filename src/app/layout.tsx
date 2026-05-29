@@ -8,7 +8,20 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Dárečky pro Dominika',
-  description: 'Tipy na dárky pro Dominika — rodinný wishlist.',
+  description: 'Tipy na dárky pro Dominika — rodinný wishlist s rezervacemi.',
+  metadataBase: new URL('https://dareckyprodominika.cz'),
+  openGraph: {
+    title: 'Dárečky pro Dominika',
+    description: 'Tipy na dárky pro Dominika — rodinný wishlist s rezervacemi.',
+    type: 'website',
+    locale: 'cs_CZ',
+    url: 'https://dareckyprodominika.cz',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dárečky pro Dominika',
+    description: 'Rodinný wishlist s rezervacemi.',
+  },
 };
 
 export default function RootLayout({
