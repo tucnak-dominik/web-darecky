@@ -10,14 +10,16 @@ const Ctx = createContext<ClaimsCtx | null>(null);
 
 export function ClaimsProvider({ children }: { children: React.ReactNode }) {
   const raw = useClaims();
-  const { isOwner } = useOwner();
+  const { isOwner, hasDecided } = useOwner();
 
-  // In owner mode the recipient must not see who has claimed what — mask out
-  // the claim map entirely so every product appears unclaimed.
+  // Mask the claim map when:
+  //   1. The visitor opted into surprise mode (`isOwner = true`), OR
+  //   2. They haven't decided yet — the popup is overlaid but the page
+  //      is rendered behind it and would leak the reservation state.
   const value = useMemo<ClaimsCtx>(() => {
-    if (!isOwner) return raw;
-    return { ...raw, claims: {} };
-  }, [isOwner, raw]);
+    if (isOwner || !hasDecided) return { ...raw, claims: {} };
+    return raw;
+  }, [isOwner, hasDecided, raw]);
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;
 }
