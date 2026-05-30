@@ -45,3 +45,6 @@ next-env.d.ts
 
 # pnpm
 .pnpm-store
+
+# local pnpm overrides (e.g. minimum-release-age bypass for fresh deps)
+.npmrc
