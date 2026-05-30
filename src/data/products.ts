@@ -91,6 +91,72 @@ export const products: Product[] = [
 
   // ── 🎁 Hezký dárek (500 – 1 999 Kč) ──────────────────────
   {
+    id: 'endorphin-magic-imagine',
+    name: 'Endorphin Magic Imagine Gin',
+    description:
+      'Český artisan gin s magickou vůní — chuť, která chutná víc, čím déle ji ochutnáváš.',
+    price: 759,
+    category: 'medium',
+    images: [`${IMG_BASE}/endorphin-magic.jpg`],
+    buyUrl: 'https://www.alkohol.cz/produkty/endorphin-magic-imagine-15853/',
+    addedAt: TODAY,
+  },
+  {
+    id: 'roku-gin-sakura',
+    name: 'Roku Gin Sakura',
+    description:
+      'Limitka japonského Roku ginu s květy sakury. Krásná lahev, krásná chuť, krásná duše.',
+    price: 799,
+    category: 'medium',
+    images: [`${IMG_BASE}/roku-gin-sakura.jpg`],
+    buyUrl: 'https://www.alkohol.cz/produkty/roku-gin-sakura-25566/',
+    addedAt: TODAY,
+  },
+  {
+    id: 'santa-ana',
+    name: 'Santa Ana',
+    description: 'Speciální alkohol z alkohol.cz — překvapení.',
+    price: 849,
+    category: 'medium',
+    images: [`${IMG_BASE}/santa-ana.jpg`],
+    buyUrl: 'https://www.alkohol.cz/produkty/santa-ana-19570/',
+    addedAt: TODAY,
+  },
+  {
+    id: 'ukiyo-japanese-blossom-gin',
+    name: 'Ukiyo Japanese Blossom Gin',
+    description:
+      'Japonský gin s květinovými tóny (sakura, citrusy, jasmín). Pro jemnější večery.',
+    price: 949,
+    category: 'medium',
+    images: [`${IMG_BASE}/ukiyo-blossom-gin.jpg`],
+    buyUrl: 'https://www.alkohol.cz/produkty/ukiyo-japanese-blosoom-gin-23214',
+    addedAt: TODAY,
+  },
+  {
+    id: 'ps5-dualsense-midnight-black',
+    name: 'PlayStation 5 DualSense ovladač — Midnight Black',
+    description:
+      'Druhý ovladač do PS5, černý. Aby šlo hrát kooperativně bez vyžebrávání kamarádova ovladače.',
+    price: 1399,
+    category: 'medium',
+    images: [`${IMG_BASE}/ps5-dualsense-black.jpg`],
+    buyUrl:
+      'https://www.alza.cz/gaming/playstation-5-dualsense-wireless-controller-midnight-black-d6485139.htm',
+    addedAt: TODAY,
+  },
+  {
+    id: 'porcelain-mandarin-gin',
+    name: 'Porcelain Mandarin Gin',
+    description:
+      'Sběratelská porcelánová lahev s mandarinkovým ginem. Drahota, ale fakt elegantní.',
+    price: 1599,
+    category: 'medium',
+    images: [`${IMG_BASE}/porcelain-mandarin-gin.jpg`],
+    buyUrl: 'https://www.alkohol.cz/produkty/porcelain-mandarin-gin-24397/',
+    addedAt: TODAY,
+  },
+  {
     id: 'hendricks-flora-adora',
     name: "Hendrick's Flora Adora Gin",
     description: 'S Trpitelkou máme rádi tento gin!',
