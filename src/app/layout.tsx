@@ -40,12 +40,14 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="font-sans bg-background text-foreground">
-        <BotIdClient
-          protect={[
-            { path: '/api/claim/*', method: 'POST' },
-            { path: '/api/claim/*', method: 'DELETE' },
-          ]}
-        />
+        {process.env.VERCEL_ENV && (
+          <BotIdClient
+            protect={[
+              { path: '/api/claim/*', method: 'POST' },
+              { path: '/api/claim/*', method: 'DELETE' },
+            ]}
+          />
+        )}
         <Providers serverMode={mode}>{children}</Providers>
       </body>
     </html>

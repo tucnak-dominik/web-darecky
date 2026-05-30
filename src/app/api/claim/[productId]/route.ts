@@ -13,7 +13,17 @@ function validate(id: string) {
   return null;
 }
 
+function redisConfigured() {
+  return Boolean(
+    process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN,
+  );
+}
+
 async function gate(req: Request) {
+  // BotID + ratelimit are production safeguards. In local dev without Vercel
+  // BotID enabled or Upstash configured they would crash — bypass them.
+  if (!redisConfigured()) return null;
+
   const bot = await checkBotId();
   if (bot.isBot) {
     return NextResponse.json({ error: 'forbidden' }, { status: 403 });
@@ -46,6 +56,13 @@ export async function POST(
   const invalid = validate(productId);
   if (invalid) return invalid;
 
+  if (!redisConfigured()) {
+    return NextResponse.json(
+      { error: 'Reservation backend not configured' },
+      { status: 503 },
+    );
+  }
+
   if (await isClaimed(productId)) {
     return NextResponse.json({ error: 'Already claimed' }, { status: 409 });
   }
@@ -63,6 +80,13 @@ export async function DELETE(
   const { productId } = await ctx.params;
   const invalid = validate(productId);
   if (invalid) return invalid;
+
+  if (!redisConfigured()) {
+    return NextResponse.json(
+      { error: 'Reservation backend not configured' },
+      { status: 503 },
+    );
+  }
 
   await unclaimProduct(productId);
   return NextResponse.json({ productId, claimedAt: null });

@@ -11,9 +11,14 @@ export function useClaims() {
   const refresh = useCallback(async () => {
     try {
       const res = await fetch('/api/claims', { cache: 'no-store' });
-      if (!res.ok) throw new Error('Failed to load claims');
+      if (!res.ok) {
+        // 500 (Redis not configured locally) or 429 — non-fatal, keep current state.
+        return;
+      }
       const data = (await res.json()) as ClaimMap;
       setClaims(data);
+    } catch (err) {
+      console.warn('[claims] refresh failed', err);
     } finally {
       setLoading(false);
     }
@@ -32,8 +37,12 @@ export function useClaims() {
         ...c,
         [productId]: { claimedAt: new Date().toISOString() },
       }));
-      const res = await fetch(`/api/claim/${productId}`, { method: 'POST' });
-      if (!res.ok) await refresh();
+      try {
+        const res = await fetch(`/api/claim/${productId}`, { method: 'POST' });
+        if (!res.ok) await refresh();
+      } catch (err) {
+        console.warn('[claims] claim failed', err);
+      }
     },
     [refresh],
   );
@@ -44,8 +53,14 @@ export function useClaims() {
         const { [productId]: _removed, ...rest } = c;
         return rest;
       });
-      const res = await fetch(`/api/claim/${productId}`, { method: 'DELETE' });
-      if (!res.ok) await refresh();
+      try {
+        const res = await fetch(`/api/claim/${productId}`, {
+          method: 'DELETE',
+        });
+        if (!res.ok) await refresh();
+      } catch (err) {
+        console.warn('[claims] unclaim failed', err);
+      }
     },
     [refresh],
   );
