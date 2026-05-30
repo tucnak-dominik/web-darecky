@@ -72,7 +72,7 @@ export function ProductModal({ product, onClose }: Props) {
                 </div>
                 <DialogTitle className="text-2xl">{product.name}</DialogTitle>
                 <DialogDescription className="font-mono text-lg text-foreground">
-                  {priceFmt.format(product.price)} Kč
+                  cca {priceFmt.format(product.price)} Kč
                 </DialogDescription>
               </DialogHeader>
               <p className="text-sm leading-relaxed whitespace-pre-line">

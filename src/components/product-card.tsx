@@ -69,7 +69,7 @@ export function ProductCard({ product, onOpen }: Props) {
             {product.name}
           </h3>
           <div className="font-mono text-sm text-muted-foreground">
-            {priceFmt.format(product.price)} Kč
+            cca {priceFmt.format(product.price)} Kč
           </div>
         </div>
       </button>

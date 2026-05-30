@@ -10,7 +10,7 @@ export const products: Product[] = [
     name: 'Jordan ponožky (3-pack)',
     description:
       'Nejlepší ponožky na nožky v nejlepší barvě, které jsou na trhu!',
-    price: 400,
+    price: 500,
     category: 'small',
     images: [`${IMG_BASE}/ponozky-jordan-scaled.webp`],
     buyUrl:
@@ -57,7 +57,7 @@ export const products: Product[] = [
     id: 'taft-molding-clay',
     name: 'Schwarzkopf Taft Looks Molding Clay',
     description: 'Modelovací hlína na dokonalý účes.',
-    price: 139,
+    price: 175,
     category: 'small',
     images: [`${IMG_BASE}/STL158.webp`],
     buyUrl:
@@ -70,10 +70,10 @@ export const products: Product[] = [
     id: 'hendricks-flora-adora',
     name: "Hendrick's Flora Adora Gin",
     description: 'S Trpitelkou máme rádi tento gin!',
-    price: 679,
+    price: 802,
     category: 'medium',
     images: [`${IMG_BASE}/thumb_1000_700_1680248418hendricks_floraadora_70cl_front.jpg`],
-    buyUrl: 'https://www.alkohol.cz/produkty/hendrick-s-gin-flora-adora-20933',
+    buyUrl: 'https://www.alkohol-online.cz/hendricks-flora-adora-43-4--0-7l',
     addedAt: TODAY,
   },
   {
@@ -92,10 +92,10 @@ export const products: Product[] = [
     id: 'seladon-barbers-club-poukaz',
     name: 'Poukaz do Seladon Barbers Club',
     description: 'Úprava vlasů a vousů od profíků.',
-    price: 820,
+    price: 920,
     category: 'medium',
     images: [`${IMG_BASE}/DSC08799.jpg`],
-    buyUrl: 'https://www.google.com/maps/place/Seladon+Barbers+Club/',
+    buyUrl: 'https://maps.app.goo.gl/9FgKboeY7wZ7JKWe9',
     addedAt: TODAY,
   },
   {
@@ -124,7 +124,7 @@ export const products: Product[] = [
     id: 'lego-lednacek-10331',
     name: 'LEGO Ledňáček (10331)',
     description: 'Ledňáček je zkrátka nádherný a dodá oživení.',
-    price: 1219,
+    price: 1199,
     category: 'medium',
     images: [`${IMG_BASE}/10331.webp`],
     buyUrl: 'https://www.lego.com/cs-cz/product/kingfisher-bird-10331',
@@ -135,7 +135,7 @@ export const products: Product[] = [
     name: 'Death Stranding 2: On The Beach (PS5)',
     description:
       'Druhý díl tě vezme do Austrálie, kde budeš propojovat chirální síť.',
-    price: 1529,
+    price: 1199,
     category: 'medium',
     images: [`${IMG_BASE}/PSV0370.webp`],
     buyUrl:
@@ -146,7 +146,7 @@ export const products: Product[] = [
     id: 'moschino-toy-boy-edp',
     name: 'Moschino Toy Boy — parfémovaná voda',
     description: 'Tuto parfémovanou vodu jsem využíval celý rok.',
-    price: 1583,
+    price: 1185,
     category: 'medium',
     images: [`${IMG_BASE}/toy-boy___200115.webp`],
     buyUrl: 'https://www.notino.cz/moschino/toy-boy-parfemovana-voda-pro-muze/',
@@ -156,7 +156,7 @@ export const products: Product[] = [
     id: 'borderlands-4-ps5',
     name: 'Borderlands 4 (PS5)',
     description: 'Pokračování oblíbené série looter-shooterů.',
-    price: 1899,
+    price: 799,
     category: 'medium',
     images: [`${IMG_BASE}/PSV0756.webp`],
     buyUrl: 'https://www.alza.cz/gaming/borderlands-4-ps5-d12509018.htm',
@@ -169,7 +169,7 @@ export const products: Product[] = [
     name: 'LEGO NASA Mars Rover Perseverance (42158)',
     description:
       'Velmi komplexní a zabaví na dlouhou dobu. A ještě k tomu je plně pojízdné!',
-    price: 2299,
+    price: 2349,
     category: 'large',
     images: [`${IMG_BASE}/42158.webp`],
     buyUrl:
@@ -181,7 +181,7 @@ export const products: Product[] = [
     name: 'LEGO Hokusai — Velká vlna (31208)',
     description:
       'Nádherný umělecký kousek. Dobře vypadá a ještě k tomu je 3D!',
-    price: 2369,
+    price: 2399,
     category: 'large',
     images: [`${IMG_BASE}/31208.webp`],
     buyUrl: 'https://www.lego.com/cs-cz/product/hokusai-the-great-wave-31208',
@@ -191,7 +191,7 @@ export const products: Product[] = [
     id: 'lego-hogwarts-castle-76419',
     name: 'LEGO Hogwarts Castle and Grounds (76419)',
     description: 'Set ze světa Harryho Pottera. Nádherný doplněk do poličky.',
-    price: 4199,
+    price: 4149,
     category: 'large',
     images: [`${IMG_BASE}/76419.webp`],
     buyUrl:
@@ -236,7 +236,7 @@ export const products: Product[] = [
     name: 'LEGO Dinosaur Fossils — T-Rex (76968)',
     description:
       'Věrná fosílie Tyrannousaura Rexe — z LEGO kostiček!',
-    price: 6299,
+    price: 6099,
     category: 'premium',
     images: [`${IMG_BASE}/76968_Prod.webp`],
     buyUrl:
@@ -247,7 +247,7 @@ export const products: Product[] = [
     id: 'apple-airpods-pro-3',
     name: 'Apple AirPods Pro 3',
     description: 'Dvakrát lepší potlačení hluku a real-time překlad.',
-    price: 6490,
+    price: 5990,
     category: 'premium',
     images: [`${IMG_BASE}/JA940k4a.webp`],
     buyUrl: 'https://www.alza.cz/apple-airpods-pro-3-d13078758.htm',
@@ -258,7 +258,7 @@ export const products: Product[] = [
     name: 'LEGO NASA Artemis Space Launch System (10341)',
     description:
       'Velmi kompaktní set. Zabírá prostoru ale hlavně do výšky!',
-    price: 6499,
+    price: 6349,
     category: 'premium',
     images: [`${IMG_BASE}/10341.webp`],
     buyUrl:
@@ -269,7 +269,7 @@ export const products: Product[] = [
     id: 'lego-titanic-10294',
     name: 'LEGO Titanic (10294)',
     description: 'Chceš nasrat Trpitelku a zároveň mě velmi potěšit?',
-    price: 16999,
+    price: 16499,
     category: 'premium',
     images: [`${IMG_BASE}/10294_Prod.webp`],
     buyUrl: 'https://www.lego.com/cs-cz/product/lego-titanic-10294',
