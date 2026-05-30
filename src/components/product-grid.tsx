@@ -19,25 +19,19 @@ export function ProductGrid() {
   const [openProduct, setOpenProduct] = useState<Product | null>(null);
   const { claims } = useClaimsContext();
 
-  const sorted = useMemo(
-    () =>
-      [...allProducts].sort((a, b) =>
-        a.addedAt < b.addedAt ? 1 : a.addedAt > b.addedAt ? -1 : 0,
-      ),
-    [],
-  );
-
   const sections = useMemo(() => {
     return ORDER.map((cat) => ({
       category: cat,
-      products: sorted.filter((p) => {
-        if (p.category !== cat) return false;
-        if (activeCategory !== 'all' && activeCategory !== cat) return false;
-        if (hideClaimed && claims[p.id]) return false;
-        return true;
-      }),
+      products: allProducts
+        .filter((p) => {
+          if (p.category !== cat) return false;
+          if (activeCategory !== 'all' && activeCategory !== cat) return false;
+          if (hideClaimed && claims[p.id]) return false;
+          return true;
+        })
+        .sort((a, b) => a.price - b.price),
     })).filter((g) => g.products.length > 0);
-  }, [sorted, activeCategory, hideClaimed, claims]);
+  }, [activeCategory, hideClaimed, claims]);
 
   return (
     <section className="mx-auto max-w-6xl px-4 pb-16">
