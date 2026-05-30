@@ -35,6 +35,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'dominikjirotka.cz' },
+      { protocol: 'https', hostname: 'www.hodinky-365.cz' },
     ],
   },
   async headers() {

@@ -254,6 +254,20 @@ export const products: Product[] = [
     addedAt: TODAY,
   },
   {
+    id: 'hamilton-khaki-field-bronze',
+    name: 'Hamilton Khaki Field Mechanical Bronze (H69459530)',
+    description:
+      'Mechanické hodinky s bronzovým pouzdrem, které si časem vyvinou vlastní patinu. Ruční nátah, 80hodinová rezerva chodu — autentická reedice vojenských hodinek.',
+    price: 25800,
+    category: 'premium',
+    images: [
+      'https://www.hodinky-365.cz/fotky/maxi/f198/hamilton-khaki-field-mechanical-bronze-h69459530_212397_276190.jpg',
+    ],
+    buyUrl:
+      'https://www.hodinky-365.cz/hamilton-khaki-field-mechanical-bronze-h69459530-x1212397',
+    addedAt: TODAY,
+  },
+  {
     id: 'iphone-17-pro-max-256',
     name: 'Apple iPhone 17 Pro Max 256 GB',
     description: 'Nový kousek z dílny Applu. Velký, pěkný, drahý.',
