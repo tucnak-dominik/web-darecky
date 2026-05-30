@@ -113,9 +113,10 @@ export const products: Product[] = [
     addedAt: TODAY,
   },
   {
-    id: 'santa-ana',
-    name: 'Santa Ana',
-    description: 'Speciální alkohol z alkohol.cz — překvapení.',
+    id: 'santa-ana-gin',
+    name: 'Santa Ana Gin',
+    description:
+      'Další gin do sbírky. Klasický stylový profil, nikdy neselže.',
     price: 849,
     category: 'medium',
     images: [`${IMG_BASE}/santa-ana.jpg`],
