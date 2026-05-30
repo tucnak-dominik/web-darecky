@@ -14,51 +14,51 @@ export function ConfettiBackground() {
       if (cancelled) return;
       frame++;
 
-      // Side bursts — like party poppers from left + right edges
+      // Gentle side bursts — like distant party poppers
       confetti({
-        particleCount: 8,
+        particleCount: 4,
         angle: 60,
-        spread: 70,
-        startVelocity: 55,
-        ticks: 250,
-        origin: { x: 0, y: 0.6 },
+        spread: 60,
+        startVelocity: 40,
+        ticks: 200,
+        origin: { x: 0, y: 0.7 },
         colors: COLORS,
         gravity: 0.8,
-        scalar: 1.2,
+        scalar: 0.9,
         shapes: ['circle', 'square'],
         disableForReducedMotion: true,
       });
       confetti({
-        particleCount: 8,
+        particleCount: 4,
         angle: 120,
-        spread: 70,
-        startVelocity: 55,
-        ticks: 250,
-        origin: { x: 1, y: 0.6 },
+        spread: 60,
+        startVelocity: 40,
+        ticks: 200,
+        origin: { x: 1, y: 0.7 },
         colors: COLORS,
         gravity: 0.8,
-        scalar: 1.2,
+        scalar: 0.9,
         shapes: ['circle', 'square'],
         disableForReducedMotion: true,
       });
 
-      // Every 5 ticks, do a top-of-page rain
-      if (frame % 5 === 0) {
+      // Occasional top rain — sparser & calmer
+      if (frame % 10 === 0) {
         confetti({
-          particleCount: 40,
-          startVelocity: 25,
+          particleCount: 18,
+          startVelocity: 20,
           spread: 360,
-          ticks: 300,
+          ticks: 280,
           origin: { x: 0.5, y: -0.05 },
           colors: COLORS,
-          gravity: 0.6,
-          scalar: 1.3,
+          gravity: 0.55,
+          scalar: 1,
           shapes: ['star', 'circle'],
           disableForReducedMotion: true,
         });
       }
 
-      setTimeout(tick, 700);
+      setTimeout(tick, 1200);
     };
     tick();
     return () => {

@@ -1,6 +1,6 @@
 'use client';
 
-const FLAKES = Array.from({ length: 90 }, (_, i) => i);
+const FLAKES = Array.from({ length: 50 }, (_, i) => i);
 
 export function SnowBackground() {
   return (
@@ -10,11 +10,11 @@ export function SnowBackground() {
     >
       {FLAKES.map((i) => {
         const left = (i * 41) % 100;
-        const delay = (i % 12) * 0.6;
-        const duration = 7 + (i % 9);
-        const size = 5 + (i % 11);
-        const opacity = 0.5 + ((i * 7) % 50) / 100;
-        const drift = ((i * 13) % 80) - 40;
+        const delay = (i % 12) * 0.7;
+        const duration = 10 + (i % 11);
+        const size = 3 + (i % 7);
+        const opacity = 0.25 + ((i * 7) % 35) / 100;
+        const drift = ((i * 13) % 60) - 30;
         return (
           <span
             key={i}
@@ -27,7 +27,7 @@ export function SnowBackground() {
               animation: `snowfall ${duration}s linear ${delay}s infinite`,
               ['--drift' as string]: `${drift}px`,
             }}
-            className="absolute rounded-full bg-white shadow-[0_0_4px_rgba(255,255,255,0.7)]"
+            className="absolute rounded-full bg-white shadow-[0_0_3px_rgba(255,255,255,0.4)]"
           />
         );
       })}
