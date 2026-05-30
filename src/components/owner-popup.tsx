@@ -17,13 +17,8 @@ export function OwnerPopup() {
   if (hasDecided) return null;
 
   return (
-    <Dialog open>
-      <DialogContent
-        showCloseButton={false}
-        className="max-w-md"
-        onEscapeKeyDown={(e) => e.preventDefault()}
-        onPointerDownOutside={(e) => e.preventDefault()}
-      >
+    <Dialog open onOpenChange={() => {}}>
+      <DialogContent showCloseButton={false} className="max-w-md">
         <DialogHeader>
           <DialogTitle className="text-2xl">Jsi Dominik? 🤔</DialogTitle>
           <DialogDescription className="text-base leading-relaxed pt-2">
