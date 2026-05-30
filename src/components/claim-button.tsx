@@ -1,6 +1,6 @@
 'use client';
 
-import confetti from 'canvas-confetti';
+import confetti, { type Shape } from 'canvas-confetti';
 import { useState } from 'react';
 import {
   AlertDialog,
@@ -38,7 +38,7 @@ export function ClaimButton({ productId, className }: Props) {
             ticks: 250,
             gravity: 0.7,
             scalar: 1.3,
-            shapes: ['circle', 'square', 'star'] as const,
+            shapes: ['circle', 'square', 'star'] as Shape[],
             colors: [
               '#f472b6',
               '#22d3ee',
