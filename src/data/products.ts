@@ -34,11 +34,23 @@ export const products: Product[] = [
     name: 'Borotalco Men Dry Deodorant Roll-on 72h',
     description:
       'Italský kuličkový deodorant s 72hodinovou ochranou, 50 ml. Lehká vůně Original, žádné bílé fleky.',
-    price: 89,
+    price: 87,
     category: 'small',
     images: ['/products/borotalco-roll-on.jpg'],
     buyUrl:
       'https://www.notino.cz/borotalco/men-dry-deodorant-roll-on-72h/p-16179051/',
+    addedAt: '2026-05-30',
+  },
+  {
+    id: 'borotalco-men-spray-72h',
+    name: 'Borotalco Men Dry deodorant ve spreji 72h',
+    description:
+      'Italský sprejový deodorant s 72hodinovou ochranou, 150 ml. Pro toho, kdo víc oceňuje sprej než kuličku.',
+    price: 87,
+    category: 'small',
+    images: ['/products/borotalco-spray.jpg'],
+    buyUrl:
+      'https://www.notino.cz/borotalco/men-dry-deodorant-ve-spreji-72h/p-16179053/',
     addedAt: '2026-05-30',
   },
   {
