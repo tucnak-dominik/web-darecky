@@ -47,13 +47,23 @@ export function ProductCard({ product, onOpen }: Props) {
         onClick={() => onOpen(product)}
         className="block text-left grow"
       >
-        <div className="aspect-[4/3] relative bg-white dark:bg-zinc-900 p-2">
+        <div
+          className={[
+            'aspect-[4/3] relative',
+            product.imageFit === 'cover'
+              ? 'bg-muted'
+              : 'bg-white dark:bg-zinc-900 p-2',
+          ].join(' ')}
+        >
           <Image
             src={product.images[0]}
             alt={product.name}
             fill
             sizes="(min-width:1280px) 25vw, (min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
-            className="object-contain group-hover:scale-105 transition-transform duration-500"
+            className={[
+              product.imageFit === 'cover' ? 'object-cover' : 'object-contain',
+              'group-hover:scale-105 transition-transform duration-500',
+            ].join(' ')}
           />
         </div>
         <div className="p-4 pb-2 flex flex-col gap-2">

@@ -43,13 +43,24 @@ export function ProductModal({ product, onClose }: Props) {
       >
         {product && (
           <>
-            <div className="relative aspect-[4/3] w-full bg-white dark:bg-zinc-900 p-4">
+            <div
+              className={[
+                'relative aspect-[4/3] w-full',
+                product.imageFit === 'cover'
+                  ? 'bg-muted'
+                  : 'bg-white dark:bg-zinc-900 p-4',
+              ].join(' ')}
+            >
               <Image
                 src={product.images[0]}
                 alt={product.name}
                 fill
                 sizes="(min-width:640px) 640px, 100vw"
-                className="object-contain"
+                className={
+                  product.imageFit === 'cover'
+                    ? 'object-cover'
+                    : 'object-contain'
+                }
                 priority
               />
             </div>
