@@ -1,5 +1,13 @@
 import type { NextConfig } from 'next';
 
+const isDev = process.env.NODE_ENV === 'development';
+
+// React dev mode needs `eval()` for source maps and stack trace
+// reconstruction; production never does. Relax CSP for dev only.
+const scriptSrc = isDev
+  ? "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com"
+  : "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com";
+
 const securityHeaders = [
   {
     key: 'Content-Security-Policy',
@@ -7,7 +15,7 @@ const securityHeaders = [
       "default-src 'self'",
       "img-src 'self' data: https:",
       "style-src 'self' 'unsafe-inline'",
-      "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
+      scriptSrc,
       "worker-src 'self' blob:",
       "font-src 'self' data:",
       "connect-src 'self' https://*.upstash.io",

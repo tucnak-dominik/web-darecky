@@ -19,11 +19,9 @@ export function ProductCard({ product, onOpen }: Props) {
   const claimed = Boolean(claims[product.id]);
 
   return (
-    <button
-      type="button"
-      onClick={() => onOpen(product)}
+    <article
       className={[
-        'group relative text-left bg-card rounded-2xl overflow-hidden border border-border/40 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all',
+        'group relative bg-card rounded-2xl overflow-hidden border border-border/40 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all',
         'flex flex-col h-full',
         claimed ? 'opacity-60' : '',
       ].join(' ')}
@@ -42,26 +40,36 @@ export function ProductCard({ product, onOpen }: Props) {
           💝 Zamluveno
         </div>
       )}
-      <div className="aspect-[4/3] relative bg-muted">
-        <Image
-          src={product.images[0]}
-          alt={product.name}
-          fill
-          sizes="(min-width:1280px) 25vw, (min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
-        />
-      </div>
-      <div className="p-4 flex flex-col gap-3 grow">
-        <h3 className="font-medium text-base leading-snug line-clamp-3 hyphens-auto break-words">
-          {product.name}
-        </h3>
-        <div className="mt-auto flex flex-col gap-2">
+
+      {/* Single click target for opening the detail modal — image + name + price. */}
+      <button
+        type="button"
+        onClick={() => onOpen(product)}
+        className="block text-left grow"
+      >
+        <div className="aspect-[4/3] relative bg-muted">
+          <Image
+            src={product.images[0]}
+            alt={product.name}
+            fill
+            sizes="(min-width:1280px) 25vw, (min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+        <div className="p-4 pb-2 flex flex-col gap-2">
+          <h3 className="font-medium text-base leading-snug line-clamp-3 hyphens-auto break-words">
+            {product.name}
+          </h3>
           <div className="font-mono text-sm text-muted-foreground">
             {priceFmt.format(product.price)} Kč
           </div>
-          <ClaimButton productId={product.id} className="w-full" />
         </div>
+      </button>
+
+      {/* Claim button lives outside the opener button to avoid nested <button>. */}
+      <div className="px-4 pb-4 pt-1">
+        <ClaimButton productId={product.id} className="w-full" />
       </div>
-    </button>
+    </article>
   );
 }
