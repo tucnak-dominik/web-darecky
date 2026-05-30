@@ -69,8 +69,19 @@ export function ClaimButton({ productId, className }: Props) {
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Zrušit</AlertDialogCancel>
-            <AlertDialogAction onClick={() => unclaim(productId)}>
+            <AlertDialogCancel
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+            >
+              Zrušit
+            </AlertDialogCancel>
+            <AlertDialogAction
+              onClick={(e) => {
+                e.stopPropagation();
+                unclaim(productId);
+              }}
+            >
               Ano, uvolnit
             </AlertDialogAction>
           </AlertDialogFooter>
