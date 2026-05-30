@@ -65,7 +65,7 @@ export function ProductCard({ product, onOpen }: Props) {
           />
         </div>
         <div className="p-4 pb-2 flex flex-col gap-2">
-          <h3 className="font-medium text-base leading-snug line-clamp-3 hyphens-auto break-words">
+          <h3 className="font-medium text-base leading-snug line-clamp-3 min-h-[calc(3*1.375em)] hyphens-auto break-words">
             {product.name}
           </h3>
           <div className="font-mono text-sm text-muted-foreground">
