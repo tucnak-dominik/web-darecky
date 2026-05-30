@@ -24,6 +24,7 @@ export function ProductCard({ product, onOpen }: Props) {
       onClick={() => onOpen(product)}
       className={[
         'group relative text-left bg-card rounded-2xl overflow-hidden border border-border/40 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all',
+        'flex flex-col h-full',
         claimed ? 'opacity-60' : '',
       ].join(' ')}
     >
@@ -51,14 +52,16 @@ export function ProductCard({ product, onOpen }: Props) {
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
-      <div className="p-4 flex items-center justify-between gap-2">
-        <div className="min-w-0">
-          <h3 className="font-medium text-base line-clamp-2">{product.name}</h3>
+      <div className="p-4 flex flex-col gap-3 grow">
+        <h3 className="font-medium text-base leading-snug line-clamp-3 hyphens-auto break-words">
+          {product.name}
+        </h3>
+        <div className="mt-auto flex flex-col gap-2">
           <div className="font-mono text-sm text-muted-foreground">
             {priceFmt.format(product.price)} Kč
           </div>
+          <ClaimButton productId={product.id} className="w-full" />
         </div>
-        <ClaimButton productId={product.id} />
       </div>
     </button>
   );
