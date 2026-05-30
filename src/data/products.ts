@@ -399,4 +399,127 @@ export const products: Product[] = [
     buyUrl: 'https://www.alza.cz/macbook-pro-14-m5-cz-2025-stribrny-d13128434.htm',
     addedAt: TODAY,
   },
+
+  // ── 💪 Vilgain (Aktin) — sleva přes Míšu ──────────────────
+  {
+    id: 'vilgain-gaba',
+    name: 'Vilgain GABA (90 kapslí)',
+    description:
+      'Doplněk pro klidnější večery a hlubší spánek. Pro slevu napiš Míše.',
+    price: 259,
+    category: 'small',
+    images: [`${IMG_BASE}/vilgain-gaba.webp`],
+    buyUrl: 'https://aktin.cz/vilgain-gaba/90-kapsli-43550',
+    addedAt: TODAY,
+  },
+  {
+    id: 'vilgain-zinek',
+    name: 'Vilgain Zinek (200 kapslí)',
+    description:
+      'Zinek pro imunitu a regeneraci. Pro slevu napiš Míše.',
+    price: 259,
+    category: 'small',
+    images: [`${IMG_BASE}/vilgain-zinek.webp`],
+    buyUrl: 'https://aktin.cz/vilgain-zinek/200-kapsli-45429',
+    addedAt: TODAY,
+  },
+  {
+    id: 'vilgain-kreatin',
+    name: 'Vilgain Kreatin (bez příchutě, 500 g)',
+    description:
+      'Klasický kreatin monohydrát pro sílu a regeneraci. Pro slevu napiš Míše.',
+    price: 399,
+    category: 'small',
+    images: [`${IMG_BASE}/vilgain-kreatin.webp`],
+    buyUrl: 'https://aktin.cz/vilgain-kreatin/bez-prichute-500-g-41573',
+    addedAt: TODAY,
+  },
+  {
+    id: 'vilgain-elektrolyty',
+    name: 'Vilgain Elektrolyty (malinová limonáda, 320 g)',
+    description:
+      'Doplnění minerálů během horka nebo po cvičení. Pro slevu napiš Míše.',
+    price: 399,
+    category: 'small',
+    images: [`${IMG_BASE}/vilgain-elektrolyty.webp`],
+    buyUrl: 'https://aktin.cz/vilgain-elektrolyty-2/malinova-limonada-320-g-45168',
+    addedAt: TODAY,
+  },
+  {
+    id: 'vilgain-ashwagandha',
+    name: 'Vilgain Ashwagandha (90 kapslí)',
+    description:
+      'Adaptogen na stres a lepší spánek. Pro slevu napiš Míše.',
+    price: 459,
+    category: 'small',
+    images: [`${IMG_BASE}/vilgain-ashwagandha.webp`],
+    buyUrl: 'https://aktin.cz/vilgain-ashwagandha/90-kapsli-41411',
+    addedAt: TODAY,
+  },
+  {
+    id: 'vilgain-horcik-bisglycinat',
+    name: 'Vilgain Hořčík bisglycinát (200 kapslí)',
+    description:
+      'Vstřebatelná forma hořčíku pro svaly a nervovou soustavu. Pro slevu napiš Míše.',
+    price: 549,
+    category: 'medium',
+    images: [`${IMG_BASE}/vilgain-horcik.webp`],
+    buyUrl: 'https://aktin.cz/vilgain-horcik-bisglycinat/200-kapsli-45525',
+    addedAt: TODAY,
+  },
+  {
+    id: 'vilgain-sleep-support',
+    name: 'Vilgain Sleep Support (3 ks)',
+    description:
+      'Tříbalení komplexu na podporu spánku. Pro slevu napiš Míše.',
+    price: 649,
+    category: 'medium',
+    images: [`${IMG_BASE}/vilgain-sleep-support.webp`],
+    buyUrl: 'https://aktin.cz/vilgain-sleep-support/3x42352',
+    addedAt: TODAY,
+  },
+  {
+    id: 'vilgain-micellar-casein',
+    name: 'Vilgain Micellar Casein Protein (jahoda, 1 kg)',
+    description:
+      'Kasein s pomalým uvolňováním na večer. Pro slevu napiš Míše.',
+    price: 749,
+    category: 'medium',
+    images: [`${IMG_BASE}/vilgain-casein.webp`],
+    buyUrl: 'https://aktin.cz/vilgain-micellar-casein-protein/jahoda-1-000-g-46222',
+    addedAt: TODAY,
+  },
+  {
+    id: 'vilgain-clear-whey-isolate',
+    name: 'Vilgain Clear Whey Isolate (pink grapefruit, 500 g)',
+    description:
+      'Lehký, šťavnatý protein — nevypadá jako protein, vypadá jako limonáda. Pro slevu napiš Míše.',
+    price: 779,
+    category: 'medium',
+    images: [`${IMG_BASE}/vilgain-clear-whey.webp`],
+    buyUrl: 'https://aktin.cz/vilgain-clear-whey-isolate/pink-grapefruit-500-g-44796',
+    addedAt: TODAY,
+  },
+  {
+    id: 'vilgain-omega-3',
+    name: 'Vilgain Omega 3 (25 mm, 180 kapslí)',
+    description:
+      'Rybí olej pro srdce, mozek a klouby. Pro slevu napiš Míše.',
+    price: 799,
+    category: 'medium',
+    images: [`${IMG_BASE}/vilgain-omega-3.webp`],
+    buyUrl: 'https://aktin.cz/vilgain-omega-3/25-mm-180-kapsli-46365',
+    addedAt: TODAY,
+  },
+  {
+    id: 'vilgain-grass-fed-whey-isolate',
+    name: 'Vilgain Grass Fed Whey Protein Isolate (vanilka, 1 kg)',
+    description:
+      'Prémiový whey isolát z mléka travou krmených krav. Pro slevu napiš Míše.',
+    price: 1199,
+    category: 'medium',
+    images: [`${IMG_BASE}/vilgain-whey-isolate.webp`],
+    buyUrl: 'https://aktin.cz/vilgain-grass-fed-whey-protein-isolate/vanilka-1-000-g-41892',
+    addedAt: TODAY,
+  },
 ];
