@@ -1,6 +1,7 @@
 'use client';
 
 import { modeConfig } from '@/lib/mode-config';
+import { EventCountdown } from './event-countdown';
 import { useMode } from './mode-provider';
 
 export function Hero() {
@@ -18,6 +19,7 @@ export function Hero() {
       <p className="mt-4 text-lg sm:text-xl text-muted-foreground text-balance">
         {cfg.heroSubtitle}
       </p>
+      <EventCountdown />
     </section>
   );
 }
