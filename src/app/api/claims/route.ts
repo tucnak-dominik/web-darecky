@@ -17,7 +17,9 @@ export async function GET(req: Request) {
   const claims = await getAllClaims();
   return NextResponse.json(claims, {
     headers: {
-      'Cache-Control': 'public, s-maxage=10, stale-while-revalidate=30',
+      // No caching: family wishlist needs near-real-time state, and a stale
+      // claim makes someone buy a duplicate gift. Read latency is fine here.
+      'Cache-Control': 'no-store',
     },
   });
 }
