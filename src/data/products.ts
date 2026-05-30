@@ -1,6 +1,5 @@
 import type { Product } from '@/types/product';
 
-const PLACEHOLDER = '/products/_placeholder.png';
 const IMG_BASE = 'https://dominikjirotka.cz/wp-content/uploads/2025/09';
 const TODAY = '2026-05-30';
 
@@ -72,7 +71,7 @@ export const products: Product[] = [
     description: 'Nejnovější Brownův román s dějem v Praze.',
     price: 669,
     category: 'medium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/tajemstvi-vsech-tajemstvi-2.jpg`],
     buyUrl:
       'https://www.knihydobrovsky.cz/kniha/tajemstvi-vsech-tajemstvi-790064665',
     addedAt: TODAY,
@@ -83,7 +82,9 @@ export const products: Product[] = [
     description: 'S Trpitelkou máme rádi tento gin!',
     price: 679,
     category: 'medium',
-    images: [PLACEHOLDER],
+    images: [
+      `${IMG_BASE}/thumb_1000_700_1680248418hendricks_floraadora_70cl_front.jpg`,
+    ],
     buyUrl: 'https://www.alkohol.cz/produkty/hendrick-s-gin-flora-adora-20933',
     addedAt: TODAY,
   },
@@ -93,7 +94,7 @@ export const products: Product[] = [
     description: 'Fancy kvalitní povlak z bambusových vláken.',
     price: 799,
     category: 'medium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/59745_povlakvizual-scaled.webp`],
     buyUrl:
       'https://www.brainmarket.cz/brainmax-nahradni-povlak-na-zatezovou-deku/',
     addedAt: TODAY,
@@ -105,7 +106,7 @@ export const products: Product[] = [
       'Sedmý díl ságy — pouze pokud už mám 4., 5. a 6. díl, ať mi navazují.',
     price: 805,
     category: 'medium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/koruna-z-mecu-1.jpg`],
     buyUrl:
       'https://www.knihydobrovsky.cz/kniha/kolo-casu-koruna-mecu-731242188',
     addedAt: TODAY,
@@ -116,7 +117,7 @@ export const products: Product[] = [
     description: 'Úprava vlasů a vousů od profíků.',
     price: 820,
     category: 'medium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/DSC08799.jpg`],
     buyUrl: 'https://www.google.com/maps/place/Seladon+Barbers+Club/',
     addedAt: TODAY,
   },
@@ -126,8 +127,9 @@ export const products: Product[] = [
     description: 'Čtvrtý díl ságy. Pevná vazba, edice na sebe navazují.',
     price: 894,
     category: 'medium',
-    images: [PLACEHOLDER],
-    buyUrl: 'https://www.knihydobrovsky.cz/kniha/kolo-casu-stin-se-siri-559031800',
+    images: [`${IMG_BASE}/kolo-casu-stin-se-siri.jpg`],
+    buyUrl:
+      'https://www.knihydobrovsky.cz/kniha/kolo-casu-stin-se-siri-559031800',
     addedAt: TODAY,
   },
   {
@@ -136,7 +138,7 @@ export const products: Product[] = [
     description: 'Pátý díl ságy — pouze pokud už mám 4. díl, ať navazují.',
     price: 894,
     category: 'medium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/kolo-casu-ohen-z-nebes-9788024292830_5.jpg`],
     buyUrl:
       'https://www.knihydobrovsky.cz/kniha/kolo-casu-ohen-z-nebes-559031964',
     addedAt: TODAY,
@@ -147,7 +149,7 @@ export const products: Product[] = [
     description: 'Šestý díl ságy — pouze pokud už mám 4. a 5. díl.',
     price: 894,
     category: 'medium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/kolo-casu-pan-chaosu-9788024261997_7.jpg`],
     buyUrl:
       'https://www.knihydobrovsky.cz/kniha/kolo-casu-6-pan-chaosu-101514436',
     addedAt: TODAY,
@@ -158,7 +160,7 @@ export const products: Product[] = [
     description: 'Ledňáček je zkrátka nádherný a dodá oživení.',
     price: 1219,
     category: 'medium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/10331.webp`],
     buyUrl: 'https://www.lego.com/cs-cz/product/kingfisher-bird-10331',
     addedAt: TODAY,
   },
@@ -168,7 +170,7 @@ export const products: Product[] = [
     description: 'Česká klasika tě vezme zpátky do středověku.',
     price: 1299,
     category: 'medium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/PSV0675g.webp`],
     buyUrl:
       'https://www.alza.cz/gaming/kingdom-come-deliverance-2?dq=12510820',
     addedAt: TODAY,
@@ -179,7 +181,7 @@ export const products: Product[] = [
     description: 'Nádherný set se stojánkem a integrovaným brouskem.',
     price: 1499,
     category: 'medium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/SGR_KS_W650DW.webp`],
     buyUrl:
       'https://www.alza.cz/siguro-ks-w650-sugoi-5-ks-dreveny-blok-d7160942.htm',
     addedAt: TODAY,
@@ -191,7 +193,7 @@ export const products: Product[] = [
       'Druhý díl tě vezme do Austrálie, kde budeš propojovat chirální síť.',
     price: 1529,
     category: 'medium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/PSV0370.webp`],
     buyUrl:
       'https://www.alza.cz/gaming/death-stranding-2-on-the-beach-ps5-d7580284.htm',
     addedAt: TODAY,
@@ -202,7 +204,7 @@ export const products: Product[] = [
     description: 'Tuto parfémovanou vodu jsem využíval celý rok.',
     price: 1583,
     category: 'medium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/toy-boy___200115.webp`],
     buyUrl: 'https://www.notino.cz/moschino/toy-boy-parfemovana-voda-pro-muze/',
     addedAt: TODAY,
   },
@@ -212,7 +214,7 @@ export const products: Product[] = [
     description: 'Pokračování oblíbené série looter-shooterů.',
     price: 1899,
     category: 'medium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/PSV0756.webp`],
     buyUrl: 'https://www.alza.cz/gaming/borderlands-4-ps5-d12509018.htm',
     addedAt: TODAY,
   },
@@ -225,7 +227,7 @@ export const products: Product[] = [
       'Velmi komplexní a zabaví na dlouhou dobu. A ještě k tomu je plně pojízdné!',
     price: 2299,
     category: 'large',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/42158.webp`],
     buyUrl:
       'https://www.lego.com/cs-cz/product/nasa-mars-rover-perseverance-42158',
     addedAt: TODAY,
@@ -237,7 +239,7 @@ export const products: Product[] = [
       'Nádherný umělecký kousek. Dobře vypadá a ještě k tomu je 3D!',
     price: 2369,
     category: 'large',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/31208.webp`],
     buyUrl: 'https://www.lego.com/cs-cz/product/hokusai-the-great-wave-31208',
     addedAt: TODAY,
   },
@@ -247,7 +249,7 @@ export const products: Product[] = [
     description: 'Zátěžová deka pomáhá se spánkem a usínáním.',
     price: 2799,
     category: 'large',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/59730-1_perina.webp`],
     buyUrl: 'https://www.brainmarket.cz/brainmax-zatezova-deka/',
     addedAt: TODAY,
   },
@@ -257,7 +259,7 @@ export const products: Product[] = [
     description: 'Set ze světa Harryho Pottera. Nádherný doplněk do poličky.',
     price: 4199,
     category: 'large',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/76419.webp`],
     buyUrl:
       'https://www.lego.com/cs-cz/product/hogwarts-castle-and-grounds-76419',
     addedAt: TODAY,
@@ -268,7 +270,7 @@ export const products: Product[] = [
     description: 'Festival je už pravidelným zpříjemněním léta.',
     price: 4790,
     category: 'large',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/RFP-square.jpg`],
     buyUrl: 'https://rockforpeople.cz/tickets/',
     addedAt: TODAY,
   },
@@ -278,7 +280,7 @@ export const products: Product[] = [
     description: 'Nádherný sběratelský set pro milovníky letadel.',
     price: 4899,
     category: 'large',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/10318.webp`],
     buyUrl: 'https://www.lego.com/cs-cz/product/concorde-10318',
     addedAt: TODAY,
   },
@@ -290,7 +292,7 @@ export const products: Product[] = [
     description: 'Lunochod! Dokonce může sbírat i měsíční horniny!',
     price: 5499,
     category: 'premium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/42182.webp`],
     buyUrl:
       'https://www.lego.com/cs-cz/product/nasa-apollo-lunar-roving-vehicle-lrv-42182',
     addedAt: TODAY,
@@ -302,7 +304,7 @@ export const products: Product[] = [
       'Věrná fosílie Tyrannousaura Rexe — z LEGO kostiček!',
     price: 6299,
     category: 'premium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/76968_Prod.webp`],
     buyUrl:
       'https://www.lego.com/cs-cz/product/dinosaur-fossils-tyrannosaurus-rex-76968',
     addedAt: TODAY,
@@ -313,7 +315,7 @@ export const products: Product[] = [
     description: 'Dvakrát lepší potlačení hluku a real-time překlad.',
     price: 6490,
     category: 'premium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/JA940k4a.webp`],
     buyUrl: 'https://www.alza.cz/apple-airpods-pro-3-d13078758.htm',
     addedAt: TODAY,
   },
@@ -324,7 +326,7 @@ export const products: Product[] = [
       'Velmi kompaktní set. Zabírá prostoru ale hlavně do výšky!',
     price: 6499,
     category: 'premium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/10341.webp`],
     buyUrl:
       'https://www.lego.com/cs-cz/product/nasa-artemis-space-launch-system-10341',
     addedAt: TODAY,
@@ -336,7 +338,7 @@ export const products: Product[] = [
       'Obdarovávaný chce mít první pořádné dospělácké hodinky!',
     price: 7920,
     category: 'premium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/93493.webp`],
     buyUrl:
       'https://www.helveti.cz/swiss-military-hanowa-flagship-chrono-ii-5331-02-007',
     addedAt: TODAY,
@@ -347,7 +349,7 @@ export const products: Product[] = [
     description: 'Chceš nasrat Trpitelku a zároveň mě velmi potěšit?',
     price: 16999,
     category: 'premium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/10294_Prod.webp`],
     buyUrl: 'https://www.lego.com/cs-cz/product/lego-titanic-10294',
     addedAt: TODAY,
   },
@@ -357,7 +359,7 @@ export const products: Product[] = [
     description: 'Nový kousek z dílny Applu. Velký, pěkný, drahý.',
     price: 34990,
     category: 'premium',
-    images: [PLACEHOLDER],
+    images: [`${IMG_BASE}/RI056b1.webp`],
     buyUrl: 'https://www.alza.cz/iphone-17-pro-max-256gb-stribrna-d13078799.htm',
     addedAt: TODAY,
   },
