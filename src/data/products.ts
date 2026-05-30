@@ -297,4 +297,15 @@ export const products: Product[] = [
     buyUrl: 'https://www.alza.cz/iphone-17-pro-max-256gb-stribrna-d13078799.htm',
     addedAt: TODAY,
   },
+  {
+    id: 'macbook-pro-14-m5',
+    name: 'MacBook Pro 14" M5 (2025) Stříbrný',
+    description:
+      'Nejnovější MacBook Pro 14" s čipem M5. Pracovní nástroj snů — kódování, video, 3D modely. Pro nejvážnější zájemce.',
+    price: 46990,
+    category: 'premium',
+    images: [`${IMG_BASE}/macbook-pro-14-m5.jpg`],
+    buyUrl: 'https://www.alza.cz/macbook-pro-14-m5-cz-2025-stribrny-d13128434.htm',
+    addedAt: TODAY,
+  },
 ];
