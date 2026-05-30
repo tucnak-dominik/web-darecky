@@ -43,13 +43,13 @@ export function ProductModal({ product, onClose }: Props) {
       >
         {product && (
           <>
-            <div className="relative aspect-[4/3] w-full bg-muted">
+            <div className="relative aspect-[4/3] w-full bg-white dark:bg-zinc-900 p-4">
               <Image
                 src={product.images[0]}
                 alt={product.name}
                 fill
                 sizes="(min-width:640px) 640px, 100vw"
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </div>
