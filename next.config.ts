@@ -23,7 +23,11 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  images: { remotePatterns: [] },
+  images: {
+    remotePatterns: [
+      { protocol: 'https', hostname: 'dominikjirotka.cz' },
+    ],
+  },
   async headers() {
     return [{ source: '/:path*', headers: securityHeaders }];
   },
