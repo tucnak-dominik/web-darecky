@@ -42,6 +42,30 @@ export const products: Product[] = [
     addedAt: '2026-05-30',
   },
   {
+    id: 'tepe-mk-angle-06-blue',
+    name: 'TePe MK Angle 0,6 mm mezizubní kartáčky (modré, 6 ks)',
+    description:
+      'Tenké modré mezizubní kartáčky pro normální mezery. Mít pořád doma, ať se vejdou všude.',
+    price: 85,
+    category: 'small',
+    images: [`${IMG_BASE}/tepe-mk-angle-06-blue.jpg`],
+    buyUrl:
+      'https://www.nazuby.cz/TePe-MK-Angle-0-6-mm-mezizubni-kartacky-modre-6ks',
+    addedAt: TODAY,
+  },
+  {
+    id: 'tepe-mk-angle-07-yellow',
+    name: 'TePe MK Angle 0,7 mm mezizubní kartáčky (žluté, 6 ks)',
+    description:
+      'Žluté mezizubní kartáčky pro o trochu větší mezery. Druhá nejpoužívanější velikost.',
+    price: 85,
+    category: 'small',
+    images: [`${IMG_BASE}/tepe-mk-angle-07-yellow.jpg`],
+    buyUrl:
+      'https://www.nazuby.cz/TePe-MK-Angle-0-7-mm-mezizubni-kartacky-zlute-6ks',
+    addedAt: TODAY,
+  },
+  {
     id: 'borotalco-men-spray-72h',
     name: 'Borotalco Men Dry deodorant ve spreji 72h',
     description:
