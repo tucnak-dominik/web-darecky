@@ -29,11 +29,10 @@ export function ProductCard({ product, onOpen }: Props) {
       ].join(' ')}
     >
       <div
-        className={`absolute top-2 left-2 z-10 px-2 py-0.5 rounded-full text-xs backdrop-blur-sm border ${cat.accentClass}`}
+        className={`absolute top-2 left-2 z-10 px-2.5 py-1 rounded-full text-xs font-medium text-white shadow-md ring-1 ring-black/10 ${cat.accentClass}`}
         style={{
-          backgroundColor: 'hsl(var(--cat) / 0.15)',
-          borderColor: 'hsl(var(--cat) / 0.4)',
-          color: 'hsl(var(--cat))',
+          backgroundColor: 'hsl(var(--cat))',
+          textShadow: '0 1px 2px rgba(0,0,0,0.35)',
         }}
       >
         {cat.emoji} {cat.label}
