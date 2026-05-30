@@ -3,6 +3,7 @@
 import type { ReactNode } from 'react';
 import { ClaimsProvider } from '@/components/claims-provider';
 import { ModeProvider } from '@/components/mode-provider';
+import { OwnerProvider } from '@/components/owner-provider';
 import type { Mode } from '@/lib/mode';
 
 export function Providers({
@@ -14,7 +15,9 @@ export function Providers({
 }) {
   return (
     <ModeProvider serverMode={serverMode}>
-      <ClaimsProvider>{children}</ClaimsProvider>
+      <OwnerProvider>
+        <ClaimsProvider>{children}</ClaimsProvider>
+      </OwnerProvider>
     </ModeProvider>
   );
 }

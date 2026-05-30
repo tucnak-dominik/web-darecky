@@ -14,6 +14,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { Button } from '@/components/ui/button';
 import { useClaimsContext } from './claims-provider';
+import { useOwner } from './owner-provider';
 
 type Props = {
   productId: string;
@@ -22,8 +23,12 @@ type Props = {
 
 export function ClaimButton({ productId, className }: Props) {
   const { claims, claim, unclaim } = useClaimsContext();
+  const { isOwner } = useOwner();
   const isClaimed = Boolean(claims[productId]);
   const [confirmOpen, setConfirmOpen] = useState(false);
+
+  // Surprise mode — the recipient shouldn't be reserving gifts for themselves.
+  if (isOwner) return null;
 
   if (!isClaimed) {
     return (
