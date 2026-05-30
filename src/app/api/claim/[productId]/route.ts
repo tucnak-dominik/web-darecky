@@ -1,4 +1,3 @@
-import { checkBotId } from 'botid/server';
 import { NextResponse } from 'next/server';
 import { products } from '@/data/products';
 import {
@@ -19,14 +18,9 @@ function validate(id: string) {
 }
 
 async function gate(req: Request) {
-  // BotID + ratelimit are production safeguards. In local dev without Vercel
-  // BotID enabled or Upstash configured they would crash — bypass them.
+  // Rate-limit only — BotID is intentionally disabled until enabled in the
+  // Vercel dashboard. Family wishlist relies on rate-limit + obscure URL.
   if (!redisConfigured()) return null;
-
-  const bot = await checkBotId();
-  if (bot.isBot) {
-    return NextResponse.json({ error: 'forbidden' }, { status: 403 });
-  }
 
   const ip = getClientIp(req);
   const { success, reset } = await claimWriteLimiter.limit(ip);
