@@ -50,9 +50,7 @@ export function ProductCard({ product, onOpen }: Props) {
         <div
           className={[
             'aspect-[4/3] relative',
-            product.imageFit === 'cover'
-              ? 'bg-muted'
-              : 'bg-white dark:bg-zinc-900 p-2',
+            product.imageFit === 'cover' ? 'bg-muted' : 'bg-zinc-100 p-2',
           ].join(' ')}
         >
           <Image

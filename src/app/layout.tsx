@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="cs"
-      className={`${GeistSans.variable} ${GeistMono.variable} ${modeClass}`}
+      className={`dark ${GeistSans.variable} ${GeistMono.variable} ${modeClass}`}
       suppressHydrationWarning
     >
       <body className="font-sans bg-background text-foreground">

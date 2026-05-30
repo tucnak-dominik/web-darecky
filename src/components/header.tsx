@@ -1,5 +1,4 @@
 import { ModeSwitcher } from './mode-switcher';
-import { ThemeToggle } from './theme-toggle';
 
 export function Header() {
   return (
@@ -10,7 +9,6 @@ export function Header() {
         </a>
         <div className="flex items-center gap-1">
           <ModeSwitcher />
-          <ThemeToggle />
         </div>
       </div>
     </header>

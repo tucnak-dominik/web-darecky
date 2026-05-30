@@ -46,9 +46,7 @@ export function ProductModal({ product, onClose }: Props) {
             <div
               className={[
                 'relative aspect-[4/3] w-full',
-                product.imageFit === 'cover'
-                  ? 'bg-muted'
-                  : 'bg-white dark:bg-zinc-900 p-4',
+                product.imageFit === 'cover' ? 'bg-muted' : 'bg-zinc-100 p-4',
               ].join(' ')}
             >
               <Image
