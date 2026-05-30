@@ -8,6 +8,7 @@ const securityHeaders = [
       "img-src 'self' data: https:",
       "style-src 'self' 'unsafe-inline'",
       "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
+      "worker-src 'self' blob:",
       "font-src 'self' data:",
       "connect-src 'self' https://*.upstash.io",
       "frame-ancestors 'none'",

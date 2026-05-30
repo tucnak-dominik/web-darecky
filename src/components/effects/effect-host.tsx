@@ -10,9 +10,11 @@ import { SparklesBackground } from './sparkles-background';
 export function EffectHost() {
   const { effectiveMode } = useMode();
   const effect = modeConfig[effectiveMode].effect;
+  const [mounted, setMounted] = useState(false);
   const [reduced, setReduced] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
     setReduced(mq.matches);
     const onChange = () => setReduced(mq.matches);
@@ -20,7 +22,10 @@ export function EffectHost() {
     return () => mq.removeEventListener('change', onChange);
   }, []);
 
-  if (reduced) return null;
+  // Render nothing on server / before hydration. Effects spawn lots of <span>
+  // children with computed inline styles that can drift between SSR and
+  // hydration if mode override kicks in. Client-only avoids that entirely.
+  if (!mounted || reduced) return null;
 
   switch (effect) {
     case 'confetti':
