@@ -1,8 +1,13 @@
 import { checkBotId } from 'botid/server';
 import { NextResponse } from 'next/server';
 import { products } from '@/data/products';
-import { claimProduct, isClaimed, unclaimProduct } from '@/lib/claims-server';
+import {
+  claimProduct,
+  isClaimed,
+  unclaimProduct,
+} from '@/lib/claims-server';
 import { claimWriteLimiter, getClientIp } from '@/lib/ratelimit';
+import { redisConfigured } from '@/lib/redis';
 
 const validIds = new Set(products.map((p) => p.id));
 
@@ -11,12 +16,6 @@ function validate(id: string) {
     return NextResponse.json({ error: 'Unknown product' }, { status: 404 });
   }
   return null;
-}
-
-function redisConfigured() {
-  return Boolean(
-    process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN,
-  );
 }
 
 async function gate(req: Request) {

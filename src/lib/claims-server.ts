@@ -1,16 +1,10 @@
 import 'server-only';
-import { redis } from './redis';
+import { redis, redisConfigured } from './redis';
 
 export type ClaimState = { claimedAt: string };
 export type AllClaims = Record<string, ClaimState>;
 
 const keyFor = (productId: string) => `claim:${productId}`;
-
-function redisConfigured(): boolean {
-  return Boolean(
-    process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN,
-  );
-}
 
 export async function isClaimed(productId: string): Promise<boolean> {
   if (!redisConfigured()) return false;
