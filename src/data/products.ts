@@ -18,18 +18,6 @@ export const products: Product[] = [
     addedAt: TODAY,
   },
   {
-    id: 'lego-storage-head-small-boy',
-    name: 'LEGO Storage Head Small Boy',
-    description:
-      'Elegantní úložný box pro zbytečné LEGO kostičky (a malé chlapy).',
-    price: 459,
-    category: 'small',
-    images: [`${IMG_BASE}/5005529.webp`],
-    buyUrl:
-      'https://www.lego.com/cs-cz/product/storage-head-small-boy-5006144',
-    addedAt: TODAY,
-  },
-  {
     id: 'old-spice-whitewater-2l',
     name: 'Old Spice Whitewater sprchový gel 3v1 (2 l)',
     description:
@@ -52,30 +40,8 @@ export const products: Product[] = [
       'https://www.alza.cz/maxi/schwarzkopf-taft-looks-molding-clay-75-ml-d5301705.htm',
     addedAt: TODAY,
   },
-  {
-    id: 'sleepking-maska-elisabeth',
-    name: 'Sleepking maska na spaní Elisabeth',
-    description:
-      'Velmi pohodlná a dokonce tlumí i okolní hluk!',
-    price: 299,
-    category: 'small',
-    images: [`${IMG_BASE}/Elisabeth-product-foto.webp`],
-    buyUrl: 'https://sleepking.cz/sleepking-maska-na-spani-elisabeth/',
-    addedAt: TODAY,
-  },
 
   // ── 🎁 Hezký dárek (500 – 1 999 Kč) ──────────────────────
-  {
-    id: 'tajemstvi-vsech-tajemstvi-dan-brown',
-    name: 'Tajemství všech tajemství (Dan Brown)',
-    description: 'Nejnovější Brownův román s dějem v Praze.',
-    price: 669,
-    category: 'medium',
-    images: [`${IMG_BASE}/tajemstvi-vsech-tajemstvi-2.jpg`],
-    buyUrl:
-      'https://www.knihydobrovsky.cz/kniha/tajemstvi-vsech-tajemstvi-790064665',
-    addedAt: TODAY,
-  },
   {
     id: 'hendricks-flora-adora',
     name: "Hendrick's Flora Adora Gin",
@@ -86,17 +52,6 @@ export const products: Product[] = [
       `${IMG_BASE}/thumb_1000_700_1680248418hendricks_floraadora_70cl_front.jpg`,
     ],
     buyUrl: 'https://www.alkohol.cz/produkty/hendrick-s-gin-flora-adora-20933',
-    addedAt: TODAY,
-  },
-  {
-    id: 'brainmax-povlak-zatezova-deka',
-    name: 'Brainmax povlak na zátěžovou deku',
-    description: 'Fancy kvalitní povlak z bambusových vláken.',
-    price: 799,
-    category: 'medium',
-    images: [`${IMG_BASE}/59745_povlakvizual-scaled.webp`],
-    buyUrl:
-      'https://www.brainmarket.cz/brainmax-nahradni-povlak-na-zatezovou-deku/',
     addedAt: TODAY,
   },
   {
@@ -119,17 +74,6 @@ export const products: Product[] = [
     category: 'medium',
     images: [`${IMG_BASE}/DSC08799.jpg`],
     buyUrl: 'https://www.google.com/maps/place/Seladon+Barbers+Club/',
-    addedAt: TODAY,
-  },
-  {
-    id: 'kolo-casu-4-stin-se-siri',
-    name: 'Kolo času: Stín se šíří (4. díl)',
-    description: 'Čtvrtý díl ságy. Pevná vazba, edice na sebe navazují.',
-    price: 894,
-    category: 'medium',
-    images: [`${IMG_BASE}/kolo-casu-stin-se-siri.jpg`],
-    buyUrl:
-      'https://www.knihydobrovsky.cz/kniha/kolo-casu-stin-se-siri-559031800',
     addedAt: TODAY,
   },
   {
@@ -162,28 +106,6 @@ export const products: Product[] = [
     category: 'medium',
     images: [`${IMG_BASE}/10331.webp`],
     buyUrl: 'https://www.lego.com/cs-cz/product/kingfisher-bird-10331',
-    addedAt: TODAY,
-  },
-  {
-    id: 'kingdom-come-deliverance-2-ps5',
-    name: 'Kingdom Come: Deliverance 2 (PS5)',
-    description: 'Česká klasika tě vezme zpátky do středověku.',
-    price: 1299,
-    category: 'medium',
-    images: [`${IMG_BASE}/PSV0675g.webp`],
-    buyUrl:
-      'https://www.alza.cz/gaming/kingdom-come-deliverance-2?dq=12510820',
-    addedAt: TODAY,
-  },
-  {
-    id: 'siguro-knife-set-ks-w650',
-    name: 'Siguro Knife Set KS-W650DW',
-    description: 'Nádherný set se stojánkem a integrovaným brouskem.',
-    price: 1499,
-    category: 'medium',
-    images: [`${IMG_BASE}/SGR_KS_W650DW.webp`],
-    buyUrl:
-      'https://www.alza.cz/siguro-ks-w650-sugoi-5-ks-dreveny-blok-d7160942.htm',
     addedAt: TODAY,
   },
   {
@@ -241,16 +163,6 @@ export const products: Product[] = [
     category: 'large',
     images: [`${IMG_BASE}/31208.webp`],
     buyUrl: 'https://www.lego.com/cs-cz/product/hokusai-the-great-wave-31208',
-    addedAt: TODAY,
-  },
-  {
-    id: 'brainmax-zatezova-deka-10kg',
-    name: 'Brainmax zátěžová deka 10 kg',
-    description: 'Zátěžová deka pomáhá se spánkem a usínáním.',
-    price: 2799,
-    category: 'large',
-    images: [`${IMG_BASE}/59730-1_perina.webp`],
-    buyUrl: 'https://www.brainmarket.cz/brainmax-zatezova-deka/',
     addedAt: TODAY,
   },
   {
@@ -329,18 +241,6 @@ export const products: Product[] = [
     images: [`${IMG_BASE}/10341.webp`],
     buyUrl:
       'https://www.lego.com/cs-cz/product/nasa-artemis-space-launch-system-10341',
-    addedAt: TODAY,
-  },
-  {
-    id: 'swiss-military-hanowa-flagship',
-    name: 'Swiss Military Hanowa Flagship Chrono II',
-    description:
-      'Obdarovávaný chce mít první pořádné dospělácké hodinky!',
-    price: 7920,
-    category: 'premium',
-    images: [`${IMG_BASE}/93493.webp`],
-    buyUrl:
-      'https://www.helveti.cz/swiss-military-hanowa-flagship-chrono-ii-5331-02-007',
     addedAt: TODAY,
   },
   {
