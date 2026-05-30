@@ -1,6 +1,6 @@
 import type { Product } from '@/types/product';
 
-const IMG_BASE = 'https://dominikjirotka.cz/wp-content/uploads/2025/09';
+const IMG_BASE = '/products';
 const TODAY = '2026-05-30';
 
 export const products: Product[] = [
@@ -48,9 +48,7 @@ export const products: Product[] = [
     description: 'S Trpitelkou máme rádi tento gin!',
     price: 679,
     category: 'medium',
-    images: [
-      `${IMG_BASE}/thumb_1000_700_1680248418hendricks_floraadora_70cl_front.jpg`,
-    ],
+    images: [`${IMG_BASE}/thumb_1000_700_1680248418hendricks_floraadora_70cl_front.jpg`],
     buyUrl: 'https://www.alkohol.cz/produkty/hendrick-s-gin-flora-adora-20933',
     addedAt: TODAY,
   },
@@ -260,9 +258,7 @@ export const products: Product[] = [
       'Mechanické hodinky s bronzovým pouzdrem, které si časem vyvinou vlastní patinu. Ruční nátah, 80hodinová rezerva chodu — autentická reedice vojenských hodinek.',
     price: 25800,
     category: 'premium',
-    images: [
-      'https://www.hodinky-365.cz/fotky/maxi/f198/hamilton-khaki-field-mechanical-bronze-h69459530_212397_276190.jpg',
-    ],
+    images: [`${IMG_BASE}/hamilton-khaki-field-bronze.jpg`],
     buyUrl:
       'https://www.hodinky-365.cz/hamilton-khaki-field-mechanical-bronze-h69459530-x1212397',
     addedAt: TODAY,

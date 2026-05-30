@@ -33,10 +33,8 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'dominikjirotka.cz' },
-      { protocol: 'https', hostname: 'www.hodinky-365.cz' },
-    ],
+    // All product images live in /public/products/. No remote hosts allowed.
+    remotePatterns: [],
   },
   async headers() {
     return [{ source: '/:path*', headers: securityHeaders }];
