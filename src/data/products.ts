@@ -360,7 +360,7 @@ export const products: Product[] = [
     id: 'lego-sagrada-familia-21065',
     name: 'LEGO Sagrada Família (21065)',
     description:
-      'Gaudího katedrála v LEGO — 5 923 dílků, 1 metr vysoká. Stavba snů.',
+      'Gaudího katedrála v LEGO — 12 060 dílků, 62 cm vysoká. Stavba snů.',
     price: 18499,
     category: 'premium',
     images: [`${IMG_BASE}/21065_Prod.webp`],
