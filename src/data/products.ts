@@ -357,6 +357,17 @@ export const products: Product[] = [
     addedAt: TODAY,
   },
   {
+    id: 'lego-sagrada-familia-21065',
+    name: 'LEGO Sagrada Família (21065)',
+    description:
+      'Gaudího katedrála v LEGO — 5 923 dílků, 1 metr vysoká. Stavba snů.',
+    price: 18499,
+    category: 'premium',
+    images: [`${IMG_BASE}/21065_Prod.webp`],
+    buyUrl: 'https://www.lego.com/cs-cz/product/sagrada-familia-21065',
+    addedAt: TODAY,
+  },
+  {
     id: 'lego-titanic-10294',
     name: 'LEGO Titanic (10294)',
     description: 'Chceš nasrat Trpitelku a zároveň mě velmi potěšit?',
