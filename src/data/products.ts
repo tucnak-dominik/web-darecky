@@ -222,18 +222,6 @@ export const products: Product[] = [
     addedAt: TODAY,
   },
   {
-    id: 'death-stranding-2-ps5',
-    name: 'Death Stranding 2: On The Beach (PS5)',
-    description:
-      'Druhý díl tě vezme do Austrálie, kde budeš propojovat chirální síť.',
-    price: 1199,
-    category: 'medium',
-    images: [`${IMG_BASE}/PSV0370.webp`],
-    buyUrl:
-      'https://www.alza.cz/gaming/death-stranding-2-on-the-beach-ps5-d7580284.htm',
-    addedAt: TODAY,
-  },
-  {
     id: 'moschino-toy-boy-edp',
     name: 'Moschino Toy Boy — parfémovaná voda',
     description: 'Tuto parfémovanou vodu jsem využíval celý rok.',
